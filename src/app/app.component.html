@@ -1,0 +1,30 @@
+<p-toast styleClass="AMCS-toast" position="top-right">
+  <ng-template let-message pTemplate="message">
+    <span
+      *ngIf="message.severity === 'error'"
+      class="p-toast-message-icon pi pi-times-circle"
+    ></span>
+    <span
+      *ngIf="message.severity === 'info'"
+      class="p-toast-message-icon pi pi-info-circle"
+    ></span>
+    <span
+      *ngIf="message.severity === 'warn'"
+      class="p-toast-message-icon pi pi-exclamation-triangle"
+    ></span>
+    <span
+      *ngIf="message.severity === 'success'"
+      class="p-toast-message-icon pi pi-check"
+    ></span>
+    <div class="p-toast-message-text">
+      <div class="flex flex-column ui-toast-message-text-content ml-3">
+        <div class="p-toast-summary">{{ message.summary | translate }}</div>
+        <div
+          class="p-toast-detail"
+          [innerText]="message.detail | translate"
+        ></div>
+      </div>
+    </div>
+  </ng-template>
+</p-toast>
+<router-outlet></router-outlet>

@@ -1,0 +1,7 @@
+{
+  "env": {
+    "apiUrl": "<url>",
+    "idsUrl": "<url>"
+  },
+  "retries": 0
+}

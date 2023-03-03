@@ -1,0 +1,85 @@
+<p-card>
+  <form
+    [formGroup]="campaignForm"
+    class="flex w-full flex-column row-gap-6"
+    (ngSubmit)="addCampaign()"
+  >
+    <div class="w-full">
+      <h4 class="text-xl mt-0 mb-3">
+        {{ 'CAMPAIGN_FORM.HEADER' | translate }}
+      </h4>
+      <div class="w-full">
+        <div class="field">
+          <label for="campaignName" class="block">{{
+            'CAMPAIGN_FORM.FIELDS.NAME' | translate
+          }}</label>
+          <input
+            type="text"
+            pInputText
+            placeholder="Name"
+            formControlName="campaignName"
+            class="w-full"
+          />
+        </div>
+        <div class="field">
+          <label for="eampId" class="block">{{
+            'CAMPAIGN_FORM.FIELDS.EAMP' | translate
+          }}</label>
+          <input
+            type="text"
+            pInputText
+            placeholder="EAMP"
+            formControlName="eampId"
+            class="w-full"
+          />
+        </div>
+        <div class="field">
+          <label for="startDate" class="block">{{
+            'CAMPAIGN_FORM.FIELDS.START_DATE' | translate
+          }}</label>
+          <p-calendar
+            [showIcon]="true"
+            formControlName="startDate"
+            styleClass="w-full"
+          ></p-calendar>
+        </div>
+        <div class="field">
+          <label for="endDate" class="block">{{
+            'CAMPAIGN_FORM.FIELDS.END_DATE' | translate
+          }}</label>
+          <p-calendar
+            [showIcon]="true"
+            formControlName="endDate"
+            styleClass="w-full"
+          ></p-calendar>
+        </div>
+        <div class="field">
+          <label for="productLine" class="block">{{
+            'CAMPAIGN_FORM.FIELDS.PRODUCT' | translate
+          }}</label>
+          <p-dropdown
+            [options]="products"
+            formControlName="productLine"
+            styleClass="w-full"
+          ></p-dropdown>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <button
+        pButton
+        type="submit"
+        label="Submit"
+        class="mr-2 px-5"
+        [disabled]="campaignForm.invalid"
+      ></button>
+      <button
+        pButton
+        type="submit"
+        label="Reset/Cancel"
+        class="px-5"
+        [disabled]="campaignForm.invalid"
+      ></button>
+    </div>
+  </form>
+</p-card>

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "lib": ["es5", "esnext", "dom"],
+    "types": ["cypress", "cypress-file-upload", "cypress-wait-until"],
+    "typeRoots": ["./node_modules/@types/", "./support"],
+    "allowJs": true,
+    "noEmit": true
+  },
+  "include": ["**/*.ts"]
+}

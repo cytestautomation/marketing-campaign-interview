@@ -1,0 +1,17 @@
+{
+  "baseUrl": "<app url>",
+  "ignoreTestFiles": [
+    "**/1-getting-started/*.js",
+    "**/2-advanced-examples/*.js"
+  ],
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "chromeWebSecurity": false,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "retries": 1,
+  "testFiles": "**/*.feature",
+  "supportFile": "cypress/support/index.ts"
+}
